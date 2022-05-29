@@ -46,19 +46,19 @@ function draw() {
   drawAge();
   
   
-  if(valid_age == 1) {
+  
 
-      if(go_roadmap == 1){
-        drawRoadmap();
-      }
+   if(go_roadmap == 1){
+      drawRoadmap();
+   }
 
-      let a = createA('page_two.html', 'Book Video Appointment to Discuss');
-      a.position(windowWidth/2-(a.width/2), win_height-50);
-      a.style('color', my_pink);
-      a.style('text-decoration', 'none');
-      a.style('font-family', 'helvetica');
+   let a = createA('page_two.html', 'Book Video Appointment to Discuss');
+   a.position(windowWidth/2-(a.width/2), win_height-50);
+   a.style('color', my_pink);
+   a.style('text-decoration', 'none');
+   a.style('font-family', 'helvetica');
 
-    }
+    
 
 }
 
@@ -116,23 +116,26 @@ function drawRoadmap() {
     valid_age = 0;
   }
   
+  if (valid_age == 1) {
 
-  //Entering the beige canvas
-  translate(50, 120);
+    //Entering the beige canvas
+    translate(50, 120);
 
-  //Running function to calculate number of lines
-  numLinesCalc();
+    //Running function to calculate number of lines
+    numLinesCalc();
 
-  //Running function to calculate line spacing
-  lineSpacing();
+    //Running function to calculate line spacing
+    lineSpacing();
 
-  //Running function to draw the roadmap lines
-  drawLines();
+    //Running function to draw the roadmap lines
+    drawLines();
 
-  //Drawing the legend
-  drawLegend();
+    //Drawing the legend
+    drawLegend();
 
-  ageNodes();
+    ageNodes();
+    
+  }
 
 
 }
