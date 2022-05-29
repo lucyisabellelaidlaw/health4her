@@ -45,7 +45,7 @@ function draw() {
   //Drawing age and text
   drawAge();
   
-  if(valid_age = 1) {
+  if(valid_age == 1) {
 
     if(go_roadmap == 1){
       drawRoadmap();
