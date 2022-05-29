@@ -20,6 +20,7 @@ var ccs_age_list = [];
 var sti_age_list = [];
 var mam_age_list = [];
 var check_code = -1;
+var valid_age = 0;
 
 
 function setup() {
@@ -43,16 +44,20 @@ function draw() {
 
   //Drawing age and text
   drawAge();
+  
+  if(valid_age = 1) {
 
-  if(go_roadmap == 1){
-    drawRoadmap();
-  }
+    if(go_roadmap == 1){
+      drawRoadmap();
+    }
 
-  let a = createA('page_two.html', 'Book Video Appointment to Discuss');
-  a.position(windowWidth/2-(a.width/2), win_height-50);
-  a.style('color', my_pink);
-  a.style('text-decoration', 'none');
-  a.style('font-family', 'helvetica');
+    let a = createA('page_two.html', 'Book Video Appointment to Discuss');
+    a.position(windowWidth/2-(a.width/2), win_height-50);
+    a.style('color', my_pink);
+    a.style('text-decoration', 'none');
+    a.style('font-family', 'helvetica');
+
+    }
 
 }
 
@@ -104,8 +109,10 @@ function drawRoadmap() {
   age = input_age.value();
   if(age > 0 && age < 90) {
     age = int(age);
+    valid_age = 1;
   } else {
     text("Invalid input", input_age.x+input_age.width+50, input_age.y+5);
+    valid_age = 0;
   }
   
 
