@@ -20,7 +20,7 @@ var ccs_age_list = [];
 var sti_age_list = [];
 var mam_age_list = [];
 var check_code = -1;
-var valid_age = 0;
+var valid_age = 1;
 
 
 function setup() {
@@ -45,17 +45,18 @@ function draw() {
   //Drawing age and text
   drawAge();
   
+  
   if(valid_age == 1) {
 
-    if(go_roadmap == 1){
-      drawRoadmap();
-    }
+      if(go_roadmap == 1){
+        drawRoadmap();
+      }
 
-    let a = createA('page_two.html', 'Book Video Appointment to Discuss');
-    a.position(windowWidth/2-(a.width/2), win_height-50);
-    a.style('color', my_pink);
-    a.style('text-decoration', 'none');
-    a.style('font-family', 'helvetica');
+      let a = createA('page_two.html', 'Book Video Appointment to Discuss');
+      a.position(windowWidth/2-(a.width/2), win_height-50);
+      a.style('color', my_pink);
+      a.style('text-decoration', 'none');
+      a.style('font-family', 'helvetica');
 
     }
 
