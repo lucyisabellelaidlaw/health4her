@@ -97,7 +97,9 @@ function ageSetup() {
 function drawAge() {
   fill(color(my_beige));
   textSize(16);
-  text('Enter your current age: ', win_width/2-30, 80);
+  text('Enter your current age:', win_width/2-30, 80);
+  text(10)
+  text('Only numbers between 1 and 90', win_width/2-30, 100);
 }
 
 //Function that fires when the go button is pressed
