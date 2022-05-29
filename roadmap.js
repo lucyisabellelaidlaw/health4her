@@ -102,7 +102,7 @@ function goRoadmap() {
 function drawRoadmap() {
   //Setting age to current input
   age = input_age.value();
-  if(age > 0 && < 90) {
+  if(age > 0 && age < 90) {
     age = int(age);
   } else {
     text("Invalid input", input_age.x+input_age.width+50, input_age.y+5);
