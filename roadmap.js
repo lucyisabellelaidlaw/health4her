@@ -221,7 +221,12 @@ function ccs_calc_age_list() {
 
 function sti_calc_age_list() {
   let ind = 0
-  if(age < 30) {
+  if(age < 20) {
+    for(let b=20; b<30; b+=1) {
+      sti_age_list[ind] = b;
+      ind=ind+1;
+    }
+  } else if(age < 30) {
     for(let m=age; m<30; m+=1) {
     sti_age_list[ind] = m;
     ind=ind+1;
