@@ -213,9 +213,16 @@ function ageNodes() {
 
 function ccs_calc_age_list() {
   let ind = 0
-  for(let l=age; l<74; l+=5) {
-    ccs_age_list[ind] = l;
-    ind=ind+1;
+  if (age < 20) {
+    for(let l=20; l<74; l+=5) {
+      ccs_age_list[ind] = l;
+      ind=ind+1;
+    }
+  } else {
+    for(let l=age; l<74; l+=5) {
+      ccs_age_list[ind] = l;
+      ind=ind+1;
+    }
   }
 }
 
